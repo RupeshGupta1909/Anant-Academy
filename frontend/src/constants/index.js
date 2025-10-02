@@ -26,11 +26,7 @@ export const DEVICE_OPTIONS = [
   { value: false, label: 'No, I do not have the required device' }
 ]
 
-export const COUNTRY_CODES = [
-  { value: '+91', label: 'India (+91)' },
-  { value: '+1', label: 'USA (+1)' },
-  { value: '+44', label: 'UK (+44)' }
-]
+export { COUNTRY_CODES, POPULAR_COUNTRY_CODES, searchCountryCodes } from './countryCodes.js'
 
 // Put your hero image at frontend/public/hero.jpg to override this
 export const HERO_IMAGE = '/hero4.png'

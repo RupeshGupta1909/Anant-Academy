@@ -27,11 +27,24 @@
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Parent's Mobile (WhatsApp) *</label>
-          <div class="mt-1 grid grid-cols-[110px_1fr] gap-2">
-            <select v-model="form.phoneCountryCode" class="border-gray-300 focus:border-brand focus:ring-brand transition-colors bg-white px-3 py-1.5 rounded-md">
-              <option value="">Code</option>
-              <option v-for="c in countryCodes" :key="c.value" :value="c.value">{{ c.label }}</option>
-            </select>
+          <div class="mt-1 grid grid-cols-[140px_1fr] gap-2">
+            <div class="relative">
+              <input 
+                v-model="countryCodeSearch" 
+                @focus="showCountryDropdown = true"
+                @blur="setTimeout(() => showCountryDropdown = false, 200)"
+                class="w-full border-gray-300 focus:border-brand focus:ring-brand transition-colors bg-white px-3 py-1.5 rounded-md text-sm"
+                placeholder="Search..."
+              />
+              <div v-if="showCountryDropdown" class="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg max-h-48 overflow-y-auto">
+                <div v-for="country in filteredCountryCodes" :key="country.value" 
+                     @click="selectCountryCode(country)"
+                     class="px-3 py-2 py-1 text-sm cursor-pointer hover:bg-gray-100"
+                     :class="{ 'bg-brand text-white': form.phoneCountryCode === country.value }">
+                  {{ country.label }}
+                </div>
+              </div>
+            </div>
             <input v-model.trim="form.phone" type="tel" class="w-full border-gray-300 focus:border-brand focus:ring-brand transition-colors bg-white px-3 py-1.5 rounded-md" placeholder="WhatsApp number" />
           </div>
           <p v-if="errors.phoneCountryCode" class="mt-1 text-sm text-red-600">{{ errors.phoneCountryCode }}</p>
@@ -116,8 +129,8 @@
 </template>
 
 <script setup>
-import { reactive, ref } from 'vue'
-import { SUBJECTS, CLASS_GRADES, LANGUAGES, DEVICE_OPTIONS, COUNTRY_CODES } from '../constants'
+import { reactive, ref, computed } from 'vue'
+import { SUBJECTS, CLASS_GRADES, LANGUAGES, DEVICE_OPTIONS, COUNTRY_CODES, searchCountryCodes } from '../constants'
 import apiClient from '../services/apiClient'
 
 const subjects = SUBJECTS
@@ -145,6 +158,20 @@ const loading = ref(false)
 const serverMessage = ref('')
 const serverError = ref(false)
 const step = ref(1)
+
+// Country code search functionality
+const countryCodeSearch = ref('')
+const showCountryDropdown = ref(false)
+
+const filteredCountryCodes = computed(() => {
+  return searchCountryCodes(countryCodeSearch.value)
+})
+
+function selectCountryCode(country) {
+  form.phoneCountryCode = country.value
+  countryCodeSearch.value = country.label
+  showCountryDropdown.value = false
+}
 
 function goToStep(next) {
   if (next === 2 && !validateStep1()) return
@@ -196,6 +223,7 @@ async function onSubmit() {
     Object.assign(form, {
       parentName: '', email: '', phone: '', phoneCountryCode: '+91', subject: '', classGrade: '', preferredDate: '', preferredTime: '', notes: '', preferredLanguage: '', hasDevice: ''
     })
+    countryCodeSearch.value = ''
     step.value = 1
   } catch (err) {
     serverMessage.value = err?.response?.data?.message || 'Submission failed. Please try again.'

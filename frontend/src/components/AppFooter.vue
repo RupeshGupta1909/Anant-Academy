@@ -27,8 +27,8 @@
         <div>
           <h3 class="text-lg font-semibold mb-4">Contact</h3>
           <ul class="space-y-2 text-sm text-gray-300">
-            <li>📧 hello@anantacademy.com</li>
-            <li>📞 +91 98765 43210</li>
+            <li>📧 support@anantacademy.co.in</li>
+            <li>📞 +91 7379082567</li>
             <li>🕒 24x7 Support</li>
             <li>📍 India, UAE, US, UK</li>
           </ul>
