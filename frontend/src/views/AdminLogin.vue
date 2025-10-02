@@ -2,7 +2,7 @@
   <div class="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
     <div class="sm:mx-auto sm:w-full sm:max-w-md">
       <div class="flex justify-center">
-        <div class="h-12 w-12 rounded-lg bg-brand text-white grid place-items-center font-semibold text-lg">AA</div>
+        <img src="/icon.ico" alt="AnantAcademy Logo" class="h-12 w-12 rounded-lg" />
       </div>
       <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
         Admin Login

@@ -5,7 +5,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div class="flex items-center justify-between">
           <router-link to="/" class="flex items-center gap-2">
-            <div class="h-8 w-8 rounded-lg bg-brand text-white grid place-items-center font-semibold text-sm">AA</div>
+            <img src="/icon.ico" alt="AnantAcademy Logo" class="h-8 w-8 rounded-lg" />
             <span class="text-xl font-semibold text-gray-900">{{ companyName }}</span>
           </router-link>
           <router-link to="/" class="text-gray-600 hover:text-gray-900 transition-colors">← Back to Home</router-link>

@@ -5,7 +5,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center py-6">
           <div class="flex items-center">
-            <div class="h-8 w-8 rounded-lg bg-brand text-white grid place-items-center font-semibold text-sm">AA</div>
+            <img src="/icon.ico" alt="AnantAcademy Logo" class="h-8 w-8 rounded-lg" />
             <h1 class="ml-3 text-2xl font-bold text-gray-900">Admin Dashboard</h1>
           </div>
           <div class="flex items-center space-x-4">

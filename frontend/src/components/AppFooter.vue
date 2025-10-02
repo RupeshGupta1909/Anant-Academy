@@ -5,7 +5,7 @@
         <!-- Company Info -->
         <div class="col-span-1 md:col-span-2">
           <div class="flex items-center gap-2 mb-4">
-            <div class="h-8 w-8 rounded-lg bg-brand text-white grid place-items-center font-semibold text-sm">AA</div>
+            <img src="/icon.ico" alt="AnantAcademy Logo" class="h-8 w-8 rounded-lg" />
             <span class="text-xl font-semibold">{{ companyName }}</span>
           </div>
           <p class="text-gray-300 text-sm leading-relaxed">

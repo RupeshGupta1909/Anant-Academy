@@ -3,7 +3,7 @@
     <header class="bg-white border-b border-gray-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         <div class="flex items-center gap-2">
-          <div class="h-9 w-9 rounded-lg bg-brand text-white grid place-items-center font-semibold">AA</div>
+          <img src="/icon.ico" alt="AnantAcademy Logo" class="h-9 w-9 rounded-lg" />
           <router-link to="/" class="text-xl font-semibold">{{ companyName }}</router-link>
         </div>
         <router-link to="/" class="text-sm text-gray-700 hover:text-gray-900">Back to Home</router-link>
