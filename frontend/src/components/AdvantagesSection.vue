@@ -5,7 +5,7 @@
         <img src="/advantage.jpg" alt="Advantages" class="rounded-xl shadow-md object-cover w-full h-[360px]" />
       </div>
       <div>
-        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900">LearnNest Advantages</h2>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900">AnantAcademy Advantages</h2>
         <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div class="flex items-start gap-3">
             <span class="h-9 w-9 grid place-items-center rounded-full bg-indigo-100 text-indigo-700">👨‍🏫</span>

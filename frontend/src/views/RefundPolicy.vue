@@ -43,7 +43,7 @@
             <h2 class="text-2xl font-semibold text-gray-900 mb-4">3. Refund Process</h2>
             <p class="text-gray-700 mb-4">To request a refund:</p>
             <ol class="list-decimal list-inside text-gray-700 space-y-2">
-              <li>Contact our support team at support@learnnest.com</li>
+              <li>Contact our support team at support@anantacademy.co.in</li>
               <li>Provide your order number and reason for refund</li>
               <li>We'll review your request within 2 business days</li>
               <li>Approved refunds will be processed within 5-7 business days</li>
@@ -103,8 +103,8 @@
               For refund requests or questions about this policy, please contact us:
             </p>
             <div class="bg-gray-50 p-4 rounded-lg">
-              <p class="text-gray-700">Email: support@anantacademy.com</p>
-              <p class="text-gray-700">Phone: +91 98765 43210</p>
+               <p class="text-gray-700">Email: support@anantacademy.co.in</p>
+               <p class="text-gray-700">Phone: +91 73790 82567</p>
               <p class="text-gray-700">Response time: Within 24 hours</p>
             </div>
           </section>

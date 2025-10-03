@@ -82,8 +82,8 @@
               If you have any questions about this Privacy Policy, please contact us at:
             </p>
             <div class="bg-gray-50 p-4 rounded-lg">
-              <p class="text-gray-700">Email: privacy@anantacademy.com</p>
-              <p class="text-gray-700">Phone: +91 98765 43210</p>
+               <p class="text-gray-700">Email: support@anantacademy.co.in</p>
+               <p class="text-gray-700">Phone: +91 73790 82567</p>
             </div>
           </section>
         </div>

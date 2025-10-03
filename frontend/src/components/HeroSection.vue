@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
       <div>
         <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-gray-900">Personalized live classes with India's best teachers</h1>
-        <p class="mt-4 text-gray-700">Give your child access to an international-standard education with LearnNest. We empower kids with necessary skills that regular schools don't teach.</p>
+        <p class="mt-4 text-gray-700">Give your child access to an international-standard education with AnantAcademy. We empower kids with necessary skills that regular schools don't teach.</p>
         <div class="mt-4 flex flex-wrap gap-2 text-sm">
           <span class="px-3 py-1 rounded-full bg-white border text-gray-700">Math</span>
           <span class="px-3 py-1 rounded-full bg-white border text-gray-700">Physics</span>

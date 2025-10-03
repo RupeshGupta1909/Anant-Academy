@@ -74,7 +74,7 @@
           <section class="mb-8">
             <h2 class="text-2xl font-semibold text-gray-900 mb-4">6. Intellectual Property</h2>
             <p class="text-gray-700 mb-4">
-              All content, materials, and intellectual property provided through our service remain the property of LearnNest or its licensors.
+              All content, materials, and intellectual property provided through our service remain the property of AnantAcademy or its licensors.
             </p>
           </section>
 
