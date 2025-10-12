@@ -3,6 +3,7 @@ import mongoose from 'mongoose'
 const DemoRequestSchema = new mongoose.Schema(
   {
     parentName: { type: String, required: true, trim: true },
+    studentName: { type: String, required: true, trim: true },
     email: { type: String, required: true, lowercase: true, trim: true },
     phoneCountryCode: { type: String, required: true, trim: true },
     phone: { type: String, required: true, trim: true },

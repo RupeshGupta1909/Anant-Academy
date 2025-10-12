@@ -19,32 +19,32 @@
           <div v-for="g in [6,7,8,9,10,11]" :key="g" class="p-4 rounded-xl border bg-white text-center">
             <div class="text-sm font-medium">Online Math</div>
             <div class="text-xs text-gray-600">Tuition for Class {{ g }}</div>
-            <a class="mt-2 inline-block text-xs text-brand">1-on-1 Classes</a>
+            <router-link to="/book-demo" class="mt-2 inline-block px-3 py-1.5 rounded-md bg-brand text-white text-xs font-medium hover:bg-brand-dark transition-colors">1-on-1 Classes</router-link>
           </div>
           <div class="p-4 rounded-xl border bg-white text-center">
             <div class="text-sm font-medium">Online Math</div>
             <div class="text-xs text-gray-600">Tuition for Class 12</div>
-            <a class="mt-2 inline-block text-xs text-brand">1-on-1 Classes</a>
+            <router-link to="/book-demo" class="mt-2 inline-block px-3 py-1.5 rounded-md bg-brand text-white text-xs font-medium hover:bg-brand-dark transition-colors">1-on-1 Classes</router-link>
           </div>
           <div class="p-4 rounded-xl border bg-white text-center">
             <div class="text-sm font-medium">Online Physics</div>
             <div class="text-xs text-gray-600">Tuition for Class 11</div>
-            <a class="mt-2 inline-block text-xs text-brand">1-on-1 Classes</a>
+            <router-link to="/book-demo" class="mt-2 inline-block px-3 py-1.5 rounded-md bg-brand text-white text-xs font-medium hover:bg-brand-dark transition-colors">1-on-1 Classes</router-link>
           </div>
           <div class="p-4 rounded-xl border bg-white text-center">
             <div class="text-sm font-medium">Online Physics</div>
             <div class="text-xs text-gray-600">Tuition for Class 12</div>
-            <a class="mt-2 inline-block text-xs text-brand">1-on-1 Classes</a>
+            <router-link to="/book-demo" class="mt-2 inline-block px-3 py-1.5 rounded-md bg-brand text-white text-xs font-medium hover:bg-brand-dark transition-colors">1-on-1 Classes</router-link>
           </div>
           <div class="p-4 rounded-xl border bg-white text-center">
             <div class="text-sm font-medium">Online Chemistry</div>
             <div class="text-xs text-gray-600">Tuition for Class 11</div>
-            <a class="mt-2 inline-block text-xs text-brand">1-on-1 Classes</a>
+            <router-link to="/book-demo" class="mt-2 inline-block px-3 py-1.5 rounded-md bg-brand text-white text-xs font-medium hover:bg-brand-dark transition-colors">1-on-1 Classes</router-link>
           </div>
           <div class="p-4 rounded-xl border bg-white text-center">
             <div class="text-sm font-medium">Online Chemistry</div>
             <div class="text-xs text-gray-600">Tuition for Class 12</div>
-            <a class="mt-2 inline-block text-xs text-brand">1-on-1 Classes</a>
+            <router-link to="/book-demo" class="mt-2 inline-block px-3 py-1.5 rounded-md bg-brand text-white text-xs font-medium hover:bg-brand-dark transition-colors">1-on-1 Classes</router-link>
           </div>
         </div>
       </section>
@@ -54,25 +54,29 @@
           <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 text-center">Online Skills Classes for Kids</h2>
           <p class="mt-2 text-center text-gray-600 text-sm">Join our personalized 1-on-1 classes in coding and chess, taught by expert teachers</p>
           <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="p-6 rounded-xl border bg-white">
+            <div class="p-6 rounded-xl border bg-white relative">
+              <span class="absolute top-2 right-2 px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">Coming Soon</span>
               <div class="font-medium">Scratch Programming Classes for Kids</div>
               <div class="text-xs text-gray-600">Grades 4 to 5</div>
-              <a class="mt-2 inline-block text-sm text-brand">View Details</a>
+              <button disabled class="mt-2 inline-block text-sm text-gray-400 cursor-not-allowed">View Details</button>
             </div>
-            <div class="p-6 rounded-xl border bg-white">
+            <div class="p-6 rounded-xl border bg-white relative">
+              <span class="absolute top-2 right-2 px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">Coming Soon</span>
               <div class="font-medium">Web Development for Kids</div>
               <div class="text-xs text-gray-600">Grades 6 to 8</div>
-              <a class="mt-2 inline-block text-sm text-brand">View Details</a>
+              <button disabled class="mt-2 inline-block text-sm text-gray-400 cursor-not-allowed">View Details</button>
             </div>
-            <div class="p-6 rounded-xl border bg-white">
+            <div class="p-6 rounded-xl border bg-white relative">
+              <span class="absolute top-2 right-2 px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">Coming Soon</span>
               <div class="font-medium">Python Programming for Kids</div>
               <div class="text-xs text-gray-600">Grades 8 to 12</div>
-              <a class="mt-2 inline-block text-sm text-brand">View Details</a>
+              <button disabled class="mt-2 inline-block text-sm text-gray-400 cursor-not-allowed">View Details</button>
             </div>
-            <div class="p-6 rounded-xl border bg-white">
+            <div class="p-6 rounded-xl border bg-white relative">
+              <span class="absolute top-2 right-2 px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">Coming Soon</span>
               <div class="font-medium">Chess Classes for Kids</div>
               <div class="text-xs text-gray-600">Age 6 to 16</div>
-              <a class="mt-2 inline-block text-sm text-brand">View Details</a>
+              <button disabled class="mt-2 inline-block text-sm text-gray-400 cursor-not-allowed">View Details</button>
             </div>
           </div>
         </div>

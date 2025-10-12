@@ -150,6 +150,7 @@
               <thead class="bg-gray-50">
                 <tr>
                   <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Parent</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Student</th>
                   <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Contact</th>
                   <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Subject</th>
                   <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Class</th>
@@ -163,6 +164,9 @@
                   <tr class="hover:bg-gray-50">
                     <td class="px-6 py-4 whitespace-nowrap">
                       <div class="text-sm font-medium text-gray-900">{{ request.parentName }}</div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <div class="text-sm text-gray-900">{{ request.studentName || 'N/A' }}</div>
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap">
                       <div class="text-sm text-gray-900">{{ request.email }}</div>
@@ -203,7 +207,7 @@
                   
                   <!-- Expanded Details Row -->
                   <tr v-if="expandedRequest === request.id" class="bg-gray-50">
-                    <td colspan="7" class="px-6 py-4">
+                    <td colspan="8" class="px-6 py-4">
                       <div class="bg-white rounded-lg p-6 shadow-sm">
                         <h4 class="text-lg font-semibold text-gray-900 mb-4">Full Request Details</h4>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -211,6 +215,7 @@
                             <h5 class="font-medium text-gray-700 mb-3">Contact Information</h5>
                             <div class="space-y-2 text-sm">
                               <div><span class="font-medium">Parent Name:</span> {{ request.parentName }}</div>
+                              <div><span class="font-medium">Student Name:</span> {{ request.studentName || 'N/A' }}</div>
                               <div><span class="font-medium">Email:</span> {{ request.email }}</div>
                               <div><span class="font-medium">Phone:</span> {{ request.phoneCountryCode }} {{ request.phone }}</div>
                             </div>

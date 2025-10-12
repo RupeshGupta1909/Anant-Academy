@@ -5,6 +5,7 @@ const countryCodeRegex = /^\+\d{1,3}$/
 
 const schema = Joi.object({
   parentName: Joi.string().trim().min(2).max(100).required(),
+  studentName: Joi.string().trim().min(2).max(100).required(),
   email: Joi.string().trim().email().required(),
   phoneCountryCode: Joi.string().trim().pattern(countryCodeRegex).required(),
   phone: Joi.string().trim().pattern(phoneRegex).required(),

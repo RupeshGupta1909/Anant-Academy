@@ -19,6 +19,7 @@ export function formatDemoRequestList(request) {
   return {
     id: request._id.toString(),
     parentName: request.parentName,
+    studentName: request.studentName,
     email: request.email,
     phoneCountryCode: request.phoneCountryCode,
     phone: request.phone,

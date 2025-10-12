@@ -17,6 +17,11 @@
           <input v-model.trim="form.parentName" type="text" class="mt-1 w-full border-gray-300 focus:border-brand focus:ring-brand transition-colors bg-white px-3 py-1.5 rounded-md" placeholder="e.g. Ananya Sharma" />
           <p v-if="errors.parentName" class="mt-1 text-sm text-red-600">{{ errors.parentName }}</p>
         </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Student name *</label>
+          <input v-model.trim="form.studentName" type="text" class="mt-1 w-full border-gray-300 focus:border-brand focus:ring-brand transition-colors bg-white px-3 py-1.5 rounded-md" placeholder="e.g. Rahul Sharma" />
+          <p v-if="errors.studentName" class="mt-1 text-sm text-red-600">{{ errors.studentName }}</p>
+        </div>
       </div>
 
       <div v-if="step === 1" class="grid grid-cols-1 gap-4">
@@ -141,6 +146,7 @@ const countryCodes = COUNTRY_CODES
 
 const form = reactive({
   parentName: '',
+  studentName: '',
   email: '',
   phone: '',
   phoneCountryCode: '+91',
@@ -181,6 +187,7 @@ function goToStep(next) {
 function validate() {
   const nextErrors = {}
   if (!form.parentName) nextErrors.parentName = 'Parent name is required'
+  if (!form.studentName) nextErrors.studentName = 'Student name is required'
   if (!form.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) nextErrors.email = 'Valid email is required'
   if (!form.phoneCountryCode || !/^\+\d{1,3}$/.test(form.phoneCountryCode)) nextErrors.phoneCountryCode = 'Select country code'
   if (!form.phone || !/^\d{6,15}$/.test(form.phone)) nextErrors.phone = 'Enter a valid phone number'
@@ -198,6 +205,7 @@ function validate() {
 function validateStep1() {
   const nextErrors = {}
   if (!form.parentName) nextErrors.parentName = 'Parent name is required'
+  if (!form.studentName) nextErrors.studentName = 'Student name is required'
   if (!form.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) nextErrors.email = 'Valid email is required'
   if (!form.phoneCountryCode || !/^\+\d{1,3}$/.test(form.phoneCountryCode)) nextErrors.phoneCountryCode = 'Select country code'
   if (!form.phone || !/^\d{6,15}$/.test(form.phone)) nextErrors.phone = 'Enter a valid phone number'
@@ -221,7 +229,7 @@ async function onSubmit() {
     serverMessage.value = res?.data?.message || 'Request submitted successfully'
     serverError.value = false
     Object.assign(form, {
-      parentName: '', email: '', phone: '', phoneCountryCode: '+91', subject: '', classGrade: '', preferredDate: '', preferredTime: '', notes: '', preferredLanguage: '', hasDevice: ''
+      parentName: '', studentName: '', email: '', phone: '', phoneCountryCode: '+91', subject: '', classGrade: '', preferredDate: '', preferredTime: '', notes: '', preferredLanguage: '', hasDevice: ''
     })
     countryCodeSearch.value = ''
     step.value = 1
