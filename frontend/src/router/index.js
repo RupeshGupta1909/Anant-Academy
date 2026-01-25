@@ -6,10 +6,12 @@ import TermsOfService from '../views/TermsOfService.vue'
 import RefundPolicy from '../views/RefundPolicy.vue'
 import AdminLogin from '../views/AdminLogin.vue'
 import AdminDashboard from '../views/AdminDashboard.vue'
+import JoinAsTutor from '../views/JoinAsTutor.vue'
 
 const routes = [
   { path: '/', name: 'home', component: HomePage },
   { path: '/book-demo', name: 'book-demo', component: DemoRequestPage },
+  { path: '/join-as-tutor', name: 'join-as-tutor', component: JoinAsTutor },
   { path: '/privacy-policy', name: 'privacy-policy', component: PrivacyPolicy },
   { path: '/terms-of-service', name: 'terms-of-service', component: TermsOfService },
   { path: '/refund-policy', name: 'refund-policy', component: RefundPolicy },

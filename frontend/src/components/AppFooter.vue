@@ -19,6 +19,7 @@
           <ul class="space-y-2">
             <li><router-link to="/" class="text-gray-300 hover:text-white text-sm transition-colors">Home</router-link></li>
             <li><router-link to="/book-demo" class="text-gray-300 hover:text-white text-sm transition-colors">Book Demo</router-link></li>
+            <li><router-link to="/join-as-tutor" class="text-gray-300 hover:text-white text-sm transition-colors">Join as Tutor</router-link></li>
             <li><a href="#subjects" class="text-gray-300 hover:text-white text-sm transition-colors">Subjects</a></li>
           </ul>
         </div>

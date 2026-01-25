@@ -98,7 +98,7 @@
               For questions about these Terms of Service, please contact us:
             </p>
             <div class="bg-gray-50 p-4 rounded-lg">
-              <p class="text-gray-700">Email: legal@anantacademy.com</p>
+              <p class="text-gray-700">Email: support@anantacademy.co.in</p>
               <p class="text-gray-700">Phone: +91 98765 43210</p>
             </div>
           </section>

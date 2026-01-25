@@ -134,10 +134,12 @@
 </template>
 
 <script setup>
-import { reactive, ref, computed } from 'vue'
+import { reactive, ref, computed, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
 import { SUBJECTS, CLASS_GRADES, LANGUAGES, DEVICE_OPTIONS, COUNTRY_CODES, searchCountryCodes } from '../constants'
 import apiClient from '../services/apiClient'
 
+const route = useRoute()
 const subjects = SUBJECTS
 const classGrades = CLASS_GRADES
 const languages = LANGUAGES
@@ -157,6 +159,14 @@ const form = reactive({
   notes: '',
   preferredLanguage: '',
   hasDevice: ''
+})
+
+// Pre-fill subject from query parameter
+onMounted(() => {
+  const subjectParam = route.query.subject
+  if (subjectParam && ['M', 'P', 'C', 'B'].includes(subjectParam)) {
+    form.subject = subjectParam
+  }
 })
 
 const errors = reactive({})

@@ -6,7 +6,10 @@
           <img src="/icon.ico" alt="AnantAcademy Logo" class="h-9 w-9 rounded-lg" />
           <span class="text-xl font-semibold">{{ companyName }}</span>
         </div>
-        <router-link to="/book-demo" class="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-brand text-white font-medium hover:bg-brand-dark">Book a Demo</router-link>
+        <div class="flex items-center gap-3">
+          <router-link to="/join-as-tutor" class="inline-flex items-center justify-center px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-700 font-medium hover:bg-gray-50">Join as Tutor</router-link>
+          <router-link to="/book-demo" class="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-brand text-white font-medium hover:bg-brand-dark">Book a Demo</router-link>
+        </div>
       </div>
     </header>
 
@@ -43,6 +46,16 @@
           </div>
           <div class="p-4 rounded-xl border bg-white text-center">
             <div class="text-sm font-medium">Online Chemistry</div>
+            <div class="text-xs text-gray-600">Tuition for Class 12</div>
+            <router-link to="/book-demo" class="mt-2 inline-block px-3 py-1.5 rounded-md bg-brand text-white text-xs font-medium hover:bg-brand-dark transition-colors">1-on-1 Classes</router-link>
+          </div>
+          <div class="p-4 rounded-xl border bg-white text-center">
+            <div class="text-sm font-medium">Online Biology</div>
+            <div class="text-xs text-gray-600">Tuition for Class 11</div>
+            <router-link to="/book-demo" class="mt-2 inline-block px-3 py-1.5 rounded-md bg-brand text-white text-xs font-medium hover:bg-brand-dark transition-colors">1-on-1 Classes</router-link>
+          </div>
+          <div class="p-4 rounded-xl border bg-white text-center">
+            <div class="text-sm font-medium">Online Biology</div>
             <div class="text-xs text-gray-600">Tuition for Class 12</div>
             <router-link to="/book-demo" class="mt-2 inline-block px-3 py-1.5 rounded-md bg-brand text-white text-xs font-medium hover:bg-brand-dark transition-colors">1-on-1 Classes</router-link>
           </div>
