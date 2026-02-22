@@ -28,7 +28,6 @@ const userSchema = new mongoose.Schema({
   timestamps: true
 })
 
-// Index for email lookup
-userSchema.index({ email: 1 })
+// Note: email index is automatically created by unique: true constraint above
 
 export default mongoose.model('User', userSchema)

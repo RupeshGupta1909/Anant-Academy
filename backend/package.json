@@ -8,7 +8,8 @@
     "start": "node src/server.js",
     "migrate:create": "migrate-mongo create",
     "migrate:up": "migrate-mongo up",
-    "migrate:down": "migrate-mongo down"
+    "migrate:down": "migrate-mongo down",
+    "create-user": "node scripts/create-user.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
