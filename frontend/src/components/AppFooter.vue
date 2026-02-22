@@ -18,6 +18,7 @@
           <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
           <ul class="space-y-2">
             <li><router-link to="/" class="text-gray-300 hover:text-white text-sm transition-colors">Home</router-link></li>
+            <li><router-link to="/about-us" class="text-gray-300 hover:text-white text-sm transition-colors">About Us</router-link></li>
             <li><router-link to="/book-demo" class="text-gray-300 hover:text-white text-sm transition-colors">Book Demo</router-link></li>
             <li><router-link to="/join-as-tutor" class="text-gray-300 hover:text-white text-sm transition-colors">Join as Tutor</router-link></li>
             <li><a href="#subjects" class="text-gray-300 hover:text-white text-sm transition-colors">Subjects</a></li>
@@ -30,6 +31,16 @@
           <ul class="space-y-2 text-sm text-gray-300">
             <li>📧 support@anantacademy.co.in</li>
             <li>📞 +91 7379082567</li>
+            <li>
+              <a
+                :href="whatsappUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1.5 text-gray-300 hover:text-white transition-colors"
+              >
+                💬 WhatsApp
+              </a>
+            </li>
             <li>🕒 24x7 Support</li>
             <li>📍 India, UAE, US, UK</li>
           </ul>
@@ -42,7 +53,8 @@
           <div class="text-sm text-gray-400">
             © {{ currentYear }} {{ companyName }} | All Rights Reserved
           </div>
-          <div class="flex space-x-6 text-sm">
+          <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+            <router-link to="/about-us" class="text-gray-400 hover:text-white transition-colors">About Us</router-link>
             <router-link to="/privacy-policy" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</router-link>
             <router-link to="/terms-of-service" class="text-gray-400 hover:text-white transition-colors">Terms of Service</router-link>
             <router-link to="/refund-policy" class="text-gray-400 hover:text-white transition-colors">Refund Policy</router-link>
@@ -59,4 +71,7 @@ import { COMPANY_NAME } from '../constants'
 
 const companyName = COMPANY_NAME
 const currentYear = computed(() => new Date().getFullYear())
+
+const whatsappNumber = '917379082567'
+const whatsappUrl = `https://wa.me/${whatsappNumber}`
 </script>
