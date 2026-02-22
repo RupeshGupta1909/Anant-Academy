@@ -1,14 +1,41 @@
 <template>
   <div>
-    <header class="bg-white border-b border-gray-200">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-        <div class="flex items-center gap-2">
-          <img src="/icon.ico" alt="AnantAcademy Logo" class="h-9 w-9 rounded-lg" />
-          <span class="text-xl font-semibold">{{ companyName }}</span>
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
+        <div class="flex items-center justify-between gap-3 min-h-10">
+          <!-- Logo + name: always visible, can shrink on mobile -->
+          <router-link to="/" class="flex items-center gap-2 min-w-0 flex-shrink">
+            <img src="/icon.ico" alt="Anant Academy Logo" class="h-8 w-8 sm:h-9 sm:w-9 rounded-lg flex-shrink-0" />
+            <span class="text-base sm:text-xl font-semibold text-gray-900 truncate">{{ companyName }}</span>
+          </router-link>
+
+          <!-- Desktop: buttons in header -->
+          <div class="hidden md:flex items-center gap-3 flex-shrink-0">
+            <router-link to="/join-as-tutor" class="inline-flex items-center justify-center px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-700 font-medium hover:bg-gray-50 text-sm whitespace-nowrap">Join as Tutor</router-link>
+            <router-link to="/book-demo" class="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-brand text-white font-medium hover:bg-brand-dark text-sm whitespace-nowrap">Book a Demo</router-link>
+          </div>
+
+          <!-- Mobile: 3-bar menu button -->
+          <button
+            type="button"
+            class="md:hidden flex-shrink-0 p-2.5 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-gray-50"
+            :aria-label="'Open menu'"
+            @click="menuOpen = !menuOpen"
+          >
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path v-if="!menuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              <path v-else stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
         </div>
-        <div class="flex items-center gap-3">
-          <router-link to="/join-as-tutor" class="inline-flex items-center justify-center px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-700 font-medium hover:bg-gray-50">Join as Tutor</router-link>
-          <router-link to="/book-demo" class="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-brand text-white font-medium hover:bg-brand-dark">Book a Demo</router-link>
+
+        <!-- Mobile: dropdown menu -->
+        <div
+          v-show="menuOpen"
+          class="md:hidden mt-3 pt-3 border-t border-gray-200 flex flex-col gap-2"
+        >
+          <router-link to="/book-demo" class="block w-full text-center py-3 rounded-lg bg-brand text-white font-medium hover:bg-brand-dark" @click="menuOpen = false">Book a Demo</router-link>
+          <router-link to="/join-as-tutor" class="block w-full text-center py-3 rounded-lg border border-gray-300 bg-white text-gray-700 font-medium hover:bg-gray-50" @click="menuOpen = false">Join as Tutor</router-link>
         </div>
       </div>
     </header>
@@ -105,13 +132,16 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import HeroSection from '../components/HeroSection.vue'
 import AdvantagesSection from '../components/AdvantagesSection.vue'
 import MoneyBackGuarantee from '../components/MoneyBackGuarantee.vue'
 import FAQAccordion from '../components/FAQAccordion.vue'
 import AppFooter from '../components/AppFooter.vue'
 import { COMPANY_NAME } from '../constants'
+
 const companyName = COMPANY_NAME
+const menuOpen = ref(false)
 </script>
 
 
